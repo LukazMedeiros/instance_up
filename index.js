@@ -4,7 +4,7 @@ import { config } from "dotenv";
 config();
 
 export async function robot() {
-  const browser = await launch({ headless: false });
+  const browser = await launch({ headless: "new" });
   const page = await browser.newPage();
 
   await page.goto(process.env.PAGE, {
